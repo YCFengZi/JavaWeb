@@ -7,30 +7,30 @@ import net.zjitc.service.UserService;
 import java.util.List;
 
 public class UserServiceImpl implements UserService {
-    UserDaoImpl userdao = new UserDaoImpl();
+    UserDaoImpl userDao = new UserDaoImpl();
 
     @Override
     public List<User> Findall() {
-        return userdao.Findall();
+        return userDao.Findall();
     }
 
     @Override
     public User FindBy(String username, String password) {
-        return userdao.FindBy(username,password);
+        return userDao.FindBy(username,password);
     }
 
     @Override
     public int add(User user) {
-        return userdao.add(user);
+        return userDao.add(user);
     }
 
     @Override
     public int update(int id, User user) {
-        return userdao.update(id,user);
+        return userDao.update(id,user);
     }
 
     @Override
-    public int delete(String username) {
-        return userdao.delete(username);
+    public int delete(String username,String password) {
+        return userDao.delete(username,password);
     }
 }

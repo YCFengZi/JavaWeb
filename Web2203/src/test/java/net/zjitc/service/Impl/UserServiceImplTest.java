@@ -29,7 +29,7 @@ public class UserServiceImplTest {
     //添加用户
     @Test
     public void add() {
-        User user = new User("username", "password", "sex", "email", "tel");
+        User user = new User("username", "password");
         System.out.println(userService.add(user));
     }
 
@@ -37,13 +37,13 @@ public class UserServiceImplTest {
     @Test
     public void update() {
         int id = 8;
-        User user = new User("name", "passwords", "sex_0", "emails", "number");
+        User user = new User("username", "passwords");
         System.out.println(userService.update(id, user));
     }
 
     //输入姓名删除用户
     @Test
     public void delete() {
-        System.out.println(userService.delete("name"));
+        System.out.println(userService.delete("username","password"));
     }
 }

@@ -14,15 +14,15 @@ public class UserDaoImpl implements UserDao {
 
     @Override
     public List<User> Findall() {
-        String sql = "select * from user";
+        String sql = "select * from `tb_user`";
         List<User> list = template.query(sql,new BeanPropertyRowMapper<User>(User.class));
         return list;
     }
 
     @Override
     public User FindBy(String username, String password) {
-        String sql = "select * from user where username = ? and password = ?";
-        List<User> list = template.query(sql,new BeanPropertyRowMapper<User>(User.class),username,password);
+        String sql = "select * from `tb_user` where username = ? and PASSWORD = ?";
+        List<User> list = template.query(sql,new BeanPropertyRowMapper<>(User.class),username,password);
         if(list.size()==0){
             return null;
         }
@@ -34,24 +34,24 @@ public class UserDaoImpl implements UserDao {
 
     @Override
     public int add(User user) {
-        String sql = "INSERT INTO user (username,password,sex,email,tel) VALUES (?,?,?,?,?)";
-        Object[] args = {user.getUsername(),user.getPassword(),user.getSex(),user.getEmail(),user.getTel()};
+        String sql = "INSERT INTO `tb_user` (username,PASSWORD) VALUES (?,?)";
+        Object[] args = {user.getUsername(),user.getPassword()};
         int result = template.update(sql,args);
         return result;
     }
 
     @Override
     public int update(int id, User user) {
-        String sql = "UPDATE user SET username = ?,password = ?,sex = ?,email = ?,tel = ? WHERE id = ?";
-        Object[] args = {user.getUsername(),user.getPassword(),user.getSex(),user.getEmail(),user.getTel(),id};
+        String sql = "UPDATE `tb_user` SET username = ?,PASSWORD = ? WHERE id = ?";
+        Object[] args = {user.getUsername(),user.getPassword(),id};
         int result = template.update(sql,args);
         return result;
     }
 
     @Override
-    public int delete(String username) {
-        String sql = "delete from user where username = ?";
-        int result = template.update(sql,username);
+    public int delete(String username,String password) {
+        String sql = "delete from `tb_user` where username = ? and password = ?";
+        int result = template.update(sql,username,password);
         return result;
     }
 }

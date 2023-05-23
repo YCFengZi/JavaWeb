@@ -13,5 +13,5 @@ public interface UserService {
     //修改用户
     public int update(int id,User user);
     //删除用户
-    public int delete(String username);
+    public int delete(String username,String password);
 }
