@@ -11,16 +11,17 @@
     <title>登陆页面</title>
     <meta charset="UTF-8">
     <link href="css/login.css" rel="stylesheet">
+    <link href="../bootstrap-5.3.0-alpha3-dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body>
+<body background="imgs/Desert.jpg" style="background-size: 100%;background-attachment: fixed">
     <div id="loginDiv">
         <form action="/web2203/login" id="form" method="get">
             <h1 id="loginMsg">LOGIN IN</h1>
             <p>Username:<input id="username" name="username" type="text"></p>
             <p>Password:<input id="password" name="password" type="password"></p>
             <div id="subDiv">
-                <input type="submit" class="button" value="login up" placeholder="请输入用户名">
-                <input type="reset" class="button" value="reset" placeholder="请输入密码">&nbsp;&nbsp;&nbsp;
+                <button type="submit" class="btn btn-success">确认</button>
+                <button type="reset" class="btn btn-danger">清除</button>
                 <a href="register.jsp">没有账号？点击注册</a>
                 <br>
                 <a href="logout.jsp">有账号？点击注销</a>
