@@ -45,19 +45,20 @@ public class LastAccessServlet extends HttpServlet {
                     cookie.setMaxAge(60*60*24*30);
                     response.addCookie(cookie);
                     break;
-                } else if(cookies == null || cookies.length == 0 || false == false) {
-                    Date date = new Date();
-                    SimpleDateFormat format = new SimpleDateFormat("yyyy年MM月dd日 HH:mm:ss");
-                    String time = format.format(date);
-                    System.out.println("编码前：" + time);
-                    time= URLEncoder.encode(time,"utf-8");
-                    System.out.println("编码后：" + time);
-                    Cookie cookie1 = new Cookie("lastTime",time);
-                    cookie.setMaxAge(60*60*24*30);
-                    response.addCookie(cookie1);
-                    response.getWriter().write("首次访问");
                 }
             }
+        }
+        if(cookies == null || cookies.length == 0 || flag == false) {
+            Date date = new Date();
+            SimpleDateFormat format = new SimpleDateFormat("yyyy年MM月dd日 HH:mm:ss");
+            String time = format.format(date);
+            System.out.println("编码前：" + time);
+            time = URLEncoder.encode(time, "utf-8");
+            System.out.println("编码后：" + time);
+            Cookie cookie = new Cookie("lastTime", time);
+            cookie.setMaxAge(60 * 60 * 24 * 30);
+            response.addCookie(cookie);
+            response.getWriter().write("首次访问");
         }
     }
 }
