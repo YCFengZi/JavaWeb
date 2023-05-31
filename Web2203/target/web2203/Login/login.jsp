@@ -29,4 +29,10 @@
         </form>
     </div>
 </body>
+<script>
+    var error = '<%=request.getParameter("error")%>'
+    if (error == 'yes') {
+        alert("登录失败")
+    }
+</script>
 </html>

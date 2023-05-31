@@ -24,11 +24,17 @@ public class loginServlet extends HttpServlet {
         User user = userService.FindBy(username,password);
         response.setHeader("Content-Type","text/html;charset=UTF-8"); //设置编码方式
         if (user != null) {
-            System.out.println("登陆成功");
-            response.getWriter().write("登陆成功");
+            HttpSession session = request.getSession();
+            session.setAttribute("user",username);
+            // 请求转发
+            request.getRequestDispatcher("/goodsList").forward(request,response);
+//            System.out.println("登陆成功");
+//            response.getWriter().write("登陆成功");
         } else {
-            System.out.println("登陆失败");
-            response.getWriter().write("登陆失败");
+            // 请求重定向
+            response.sendRedirect("/web2203/Login/login.jsp?error=yes");
+//            System.out.println("登陆失败");
+//            response.getWriter().write("登陆失败");
         }
     }
 }

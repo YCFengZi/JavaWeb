@@ -21,7 +21,7 @@ public class AServlet extends HttpServlet {
         System.out.println("a servlet...");
         // request域中设置值
         request.setAttribute("name","YCFengZi");
-        // 请求转发需要先等到一盒dispatcher对象,再由此对象调用forword()方法转发
+        // 请求转发需要先等到一个dispatcher对象,再由此对象调用forword()方法转发
         RequestDispatcher dispatcher = request.getRequestDispatcher("/BServlet");
         // 请求转发
         dispatcher.forward(request,response);

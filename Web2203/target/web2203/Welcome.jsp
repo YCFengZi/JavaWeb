@@ -76,7 +76,7 @@
             </ul>
         </div>
         <div class="title">
-            <h1><span style="color: crimson;">YC</span> FengZi</h1>
+            <a href="/web2203/goods/list.jsp" style="text-decoration: none"><h1><span style="color: crimson;">YC</span> FengZi</h1></a>
         </div>
     </header>
 </body>

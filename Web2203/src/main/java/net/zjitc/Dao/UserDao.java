@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface UserDao {
     //查询所有用户
-    public List<User> Findall();
+    public List<User> FindAll();
     //根据用户名和密码查询用户
     public User FindBy(String username,String password);
     //添加用户
