@@ -3,12 +3,15 @@ package net.zjitc.servlet.goods;
 import net.zjitc.Dao.GoodsDao;
 import net.zjitc.Dao.Impl.GoodsDaoImpl;
 import net.zjitc.domain.Goods;
+import net.zjitc.service.GoodsService;
+import net.zjitc.service.Impl.GoodsServiceImpl;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -17,7 +20,7 @@ import java.util.List;
  */
 @WebServlet(name = "GoodsListServlet", value = "/goodsList")
 public class GoodsListServlet extends HttpServlet {
-    private GoodsDao goodsDao;
+    GoodsService goodsService = new GoodsServiceImpl();
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         this.doPost(request,response);
@@ -33,7 +36,14 @@ public class GoodsListServlet extends HttpServlet {
             writer.write("请先<a href=\"/web2203/Login/login.jsp\">登录</a>！");
         } else {
             // 查询登录用户购买商品的信息
-
+            Object id = session.getAttribute("id");
+            GoodsDao goodsDao = new GoodsDaoImpl();
+            Goods goods = goodsService.FindById((Integer) id);
+            List<Goods> list = new ArrayList<>();
+            list.add(goods);
+            request.setAttribute("li",list);
+            RequestDispatcher dispatcher = request.getRequestDispatcher("goods/list.jsp");
+            dispatcher.forward(request,response);
         }
     }
 }

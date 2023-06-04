@@ -19,13 +19,8 @@ public class GoodsServiceImpl implements GoodsService {
     }
 
     @Override
-    public Goods FindByName(String name) {
-        return goodsDao.FindByName(name);
-    }
-
-    @Override
-    public List<Goods> FindBy(String name) {
-        return goodsDao.FindBy(name);
+    public Goods FindById(int id) {
+        return goodsDao.FindById(id);
     }
 
     @Override
@@ -34,12 +29,12 @@ public class GoodsServiceImpl implements GoodsService {
     }
 
     @Override
-    public int delete(String name) {
-        return goodsDao.delete(name);
+    public int delete(int id) {
+        return goodsDao.delete(id);
     }
 
     @Override
-    public int update(String name) {
-        return goodsDao.update(name);
+    public int update(int id) {
+        return goodsDao.update(id);
     }
 }

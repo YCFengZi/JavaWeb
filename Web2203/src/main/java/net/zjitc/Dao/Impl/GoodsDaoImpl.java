@@ -22,26 +22,13 @@ public class GoodsDaoImpl implements GoodsDao {
     }
 
     @Override
-    public Goods FindByName(String name) {
-        String sql = "select * from goods where name = ?";
-        List<Goods> list = template.query(sql, new BeanPropertyRowMapper<>(Goods.class), name);
+    public Goods FindById(int id) {
+        String sql = "select * from goods where id = ?";
+        List<Goods> list = template.query(sql, new BeanPropertyRowMapper<>(Goods.class), id);
         if (list.size() == 0) {
             return null;
         } else if(list.size() == 1) {
             return list.get(0);
-        } else {
-            return null;
-        }
-    }
-
-    @Override
-    public List<Goods> FindBy(String name) {
-        String sql = "select * from goods where name like '%'?'%'";
-        List<Goods> list = template.query(sql, new BeanPropertyRowMapper<>(Goods.class), name);
-        if (list.size() == 0) {
-            return null;
-        } else if(list.size() >= 1) {
-            return list;
         } else {
             return null;
         }
@@ -56,16 +43,16 @@ public class GoodsDaoImpl implements GoodsDao {
     }
 
     @Override
-    public int delete(String name) {
-        String sql = "delete from goods where name = ?";
-        int result = template.update(sql, name);
+    public int delete(int id) {
+        String sql = "delete from goods where id = ?";
+        int result = template.update(sql, id);
         return result;
     }
 
     @Override
-    public int update(String name) {
-        String sql = "UPDATE goods SET name = ?";
-        int result = template.update(sql, name);
+    public int update(int id) {
+        String sql = "UPDATE goods SET id = ?";
+        int result = template.update(sql, id);
         return result;
     }
 }

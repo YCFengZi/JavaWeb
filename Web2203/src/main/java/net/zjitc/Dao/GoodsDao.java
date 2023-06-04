@@ -12,13 +12,11 @@ public interface GoodsDao {
     // 查询所有商品
     public List<Goods> FindAll();
     // 查询指定商品
-    public Goods FindByName(String name);
-    // 查询带*的商品
-    public List<Goods> FindBy(String name);
+    public Goods FindById(int id);
     // 添加商品
     public int add(Goods goods);
     // 删除商品
-    public int delete(String name);
+    public int delete(int id);
     // 修改商品
-    public int update(String name);
+    public int update(int id);
 }
