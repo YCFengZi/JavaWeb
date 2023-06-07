@@ -105,7 +105,7 @@
                 <li><span>最新音乐</span></li>
             </ul>
             <div class="banner">
-                <h2 align="center" style="padding-top: 15px"> 商品列表 <a href="/web2203/Login/login.jsp">查询</a> </h2>
+                <h2 align="center" style="padding-top: 15px"> 商品列表 <a href="/web2203/Login/login.jsp"/>查询</a> </h2>
                 <table style="padding-top: 15px; margin: 0 auto">
                     <tr>
                         <td>编号</td>

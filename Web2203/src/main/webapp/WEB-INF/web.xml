@@ -6,7 +6,7 @@
     <display-name>Archetype Created Web Application</display-name>
     <!-- 设置欢迎页 -->
     <welcome-file-list>
-        <welcome-file>Welcome.jsp</welcome-file>
+        <welcome-file>/Welcome/Welcome.jsp</welcome-file>
     </welcome-file-list>
     <!-- 设置session存活时间 -->
     <session-config>
