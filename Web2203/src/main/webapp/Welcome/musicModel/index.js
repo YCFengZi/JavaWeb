@@ -6,31 +6,31 @@ class MusicPlayer {
             songObjArr: [
                 {
                     title: '晴天',
-                    artist: '周杰伦',
+                    author: '周杰伦',
                     imgSrc: '/web2203/Welcome/musicModel/public/images/周杰伦.jpg',
                     url: '/web2203/Welcome/musicModel/public/audios/晴天.mp3'
                 },
                 {
                     title: '葡萄成熟时',
-                    artist: '陈奕迅',
+                    author: '陈奕迅',
                     imgSrc: '/web2203/Welcome/musicModel/public/images/陈奕迅.jpg',
                     url: '/web2203/Welcome/musicModel/public/audios/葡萄成熟时.mp3',
                 },
                 {
                     title: '黑夜问白天',
-                    artist: '林俊杰',
+                    author: '林俊杰',
                     imgSrc: '/web2203/Welcome/musicModel/public/images/林俊杰.jpg',
                     url: '/web2203/Welcome/musicModel/public/audios/黑夜问白天.mp3',
                 },
                 {
                     title: '说谎',
-                    artist: '林宥嘉',
+                    author: '林宥嘉',
                     imgSrc: '/web2203/Welcome/musicModel/public/images/林宥嘉.jpg',
                     url: '/web2203/Welcome/musicModel/public/audios/说谎.mp3'
                 },
                 {
                     title: '十面埋伏',
-                    artist: '陈奕迅',
+                    author: '陈奕迅',
                     imgSrc: '/web2203/Welcome/musicModel/public/images/陈奕迅2.jpg',
                     url: '/web2203/Welcome/musicModel/public/audios/十面埋伏.mp3'
                 },

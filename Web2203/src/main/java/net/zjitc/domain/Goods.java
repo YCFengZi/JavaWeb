@@ -49,6 +49,11 @@ public class Goods {
         this.price = price;
         this.information = information;
     }
+    public Goods(String name, float price, String information) {
+        this.name = name;
+        this.price = price;
+        this.information = information;
+    }
 
     @Override
     public String toString() {

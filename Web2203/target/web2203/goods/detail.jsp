@@ -42,7 +42,7 @@
             <div class="other">
                 <div class="userInfo">
                     <img src="/web2203/goods/image/YCFengZi.jpg" alt="author">
-                    <span>YCFengZi</span>
+                    <span>${user}</span>
                 </div>
                 <ul>
                     <li><i class="iconfont icon-zhuti"></i></li>

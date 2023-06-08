@@ -7,31 +7,31 @@ const _voice = document.querySelector('._voice')
 const playlist = [
     {
         title: '晴天',
-        artist: '周杰伦',
+        author: '周杰伦',
         audioUrl: '/web2203/goods/audio/晴天.mp3',
         albumArtUrl: '/web2203/goods/image/周杰伦.jpg'
     },
     {
         title: '葡萄成熟时',
-        artist: '陈奕迅',
+        author: '陈奕迅',
         audioUrl: '/web2203/goods/audio/葡萄成熟时.mp3',
         albumArtUrl: '/web2203/goods/image/陈奕迅.jpg'
     },
     {
         title: '黑夜问白天',
-        artist: '林俊杰',
+        author: '林俊杰',
         audioUrl: '/web2203/goods/audio/黑夜问白天.mp3',
         albumArtUrl: '/web2203/goods/image/林俊杰.jpg'
     },
     {
         title: '说谎',
-        artist: '林宥嘉',
+        author: '林宥嘉',
         audioUrl: '/web2203/goods/audio/说谎.mp3',
         albumArtUrl: '/web2203/goods/image/林宥嘉.jpg'
     },
     {
         title: '十面埋伏',
-        artist: '陈奕迅',
+        author: '陈奕迅',
         audioUrl: '/web2203/goods/audio/十面埋伏.mp3',
         albumArtUrl: '/web2203/goods/image/陈奕迅.jpg'
     },

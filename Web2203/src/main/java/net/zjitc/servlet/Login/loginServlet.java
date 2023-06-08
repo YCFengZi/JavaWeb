@@ -28,6 +28,7 @@ public class loginServlet extends HttpServlet {
         response.setHeader("Content-Type","text/html;charset=UTF-8"); //设置编码方式
         if (user != null) {
             HttpSession session = request.getSession();
+            request.setAttribute("user",username);
             session.setAttribute("user",username);
             session.setAttribute("id",id);
             // 请求转发
